@@ -338,9 +338,17 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
+  /* Adjust the message */
   .msg {
     font-size: 50px; /* Adjust message size for mobile */
     margin-top: 0;
+    top: 25%; /* Move it higher */
+  }
+
+  /* Adjust year styles */
+  .year {
+    top: 40%; /* Move year text slightly upward */
+    transform: translateY(-50%);
   }
 
   .year > span {
@@ -349,9 +357,51 @@ canvas {
   }
 
   .first_year {
-    margin-right: 50px; /* Adjust spacing for mobile */
+    margin-right: 50px; /* Adjust spacing between "202" and "5" */
   }
 
+  /* Fix animation for old '4' */
+  .old {
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
+    margin-left: -50px;
+  }
+
+  @keyframes old_animation_mobile {
+    0% {
+      top: 0%;
+    }
+    100% {
+      top: -300%; /* Move '4' completely out of the frame */
+    }
+  }
+
+  /* Fix animation for new '5' */
+  .new {
+    position: absolute;
+    right: 0;
+    animation: new_animation_mobile 5s ease-in-out 1.5s forwards;
+  }
+
+  @keyframes new_animation_mobile {
+    0% {
+      right: -100px; /* Start outside the frame */
+    }
+    40% {
+      right: 120px; /* Intermediate position */
+    }
+    90% {
+      right: 120px; /* Stabilize the position */
+    }
+    100% {
+      right: 160px; /* Final aligned position */
+      color: yellow;
+    }
+  }
+
+  /* Adjust balloon size and position */
   .balloon {
     width: 60px; /* Smaller balloons */
     height: 80px;
@@ -366,6 +416,7 @@ canvas {
     height: 50px; /* Shorter balloon string */
   }
 
+  /* Fireworks scaling and positioning */
   .firework {
     transform: scale(0.75); /* Reduce firework size */
   }
