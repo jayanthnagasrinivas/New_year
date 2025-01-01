@@ -348,7 +348,7 @@ canvas {
     transform: translateY(-50%); /* Initial position */
   }
   100% {
-    transform: translateY(-50%) translateX(100px); /* Move the year to the right */
+    transform: translateY(-50%) translateX(60px); /* Move the year to the right */
   }
 }
   /* Adjust year styles */
