@@ -338,85 +338,84 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
-  /* Adjust the message text size and spacing */
+  /* Adjust the message text size and positioning */
   .msg {
-    font-size: 50px; /* Smaller font size */
-    margin-top: -150px; /* Adjust spacing for better positioning */
+    font-size: 40px; /* Reduce font size */
+    top: 30%; /* Move the message higher */
+    margin-top: 0; /* Reset margin for proper positioning */
   }
 
-  /* Adjust the year numbers */
+  /* Year adjustments */
   .year {
-    position: absolute;
-    top: 70%; /* Center it vertically */
-    transform: translateY(-50%); /* Ensure proper centering */
+    top: 55%; /* Center it vertically on smaller screens */
+    transform: translateY(-50%);
     width: 100%;
     text-align: center;
   }
 
   .year > span {
-    font-size: 80px; /* Smaller font size for the year */
-    letter-spacing: -3px; /* Adjust letter spacing */
+    font-size: 60px; /* Reduce year size */
+    letter-spacing: -5px; /* Adjust spacing between numbers */
   }
 
   .first_year {
-    margin-right: 20px; /* Reduce spacing between numbers */
+    margin-right: 15px; /* Adjust spacing between "202" and "5" */
   }
 
   .old {
-    position: absolute;
-    top: 0%;
-    animation: old_animation 2.5s ease-in-out 4s forwards;
-    margin-left: -40px; /* Adjust position to prevent collision */
+    margin-left: -20px; /* Reduce "4" offset */
+    animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
   }
 
   .new {
-    position: absolute;
-    right: 0; /* Fix alignment */
-    animation: new_animation 5s ease-in-out 1.5s forwards;
+    right: 0;
+    animation: new_animation_mobile 5s ease-in-out 1.5s forwards;
   }
 
-  @keyframes old_animation {
+  @keyframes old_animation_mobile {
     0% {
       top: 0%;
     }
     100% {
-      top: -300%; /* Ensure it moves out cleanly */
+      top: -300%; /* Push "4" completely off-screen */
     }
   }
 
-  @keyframes new_animation {
+  @keyframes new_animation_mobile {
     0% {
-      right: 0; /* Start aligned */
+      right: 0; /* Align to start */
     }
     40% {
-      right: 200px; /* Middle animation position */
+      right: 120px; /* Move slightly to the left */
     }
     90% {
-      right: 200px;
+      right: 120px;
     }
     100% {
-      right: 250px; /* Final aligned position */
+      right: 160px; /* Final position */
       color: yellow;
     }
   }
 
   /* Adjust the balloon size and position */
   .balloon {
-    width: 50px;
-    height: 70px;
-    margin-top: -200px; /* Adjust to fit above year */
+    width: 40px;
+    height: 60px;
+    margin-top: -180px;
+    right: -40px; /* Adjust starting position */
   }
 
   .balloon::after {
-    height: 40px; /* Shorter string */
+    height: 30px; /* Shorter string */
   }
 
+  /* Fireworks scaling */
   .firework {
-    transform: scale(0.5); /* Smaller fireworks */
+    transform: scale(0.5); /* Shrink fireworks for mobile */
   }
 
   #firework1 {
-    left: 20%; /* Adjust positions to fit the screen */
+    left: 20%; /* Position fireworks */
     top: 60%;
   }
 
@@ -427,6 +426,13 @@ canvas {
 
   #firework3 {
     left: 80%;
-    top: 30%;
+    top: 20%;
+  }
+
+  /* Canvas adjustment */
+  canvas {
+    width: 100%;
+    height: 100%;
   }
 }
+
