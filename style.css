@@ -419,17 +419,17 @@ canvas {
  @keyframes balloon_animation_mobile {
   0% {
     right: -100px;
-    top: 60%;
+    top: 100%;
   }
   40% {
     right: 50px;
   }
   50% {
-    right: 90px;
-    top: 60%;
+    right: 80px;
+    top: 100%;
   }
   100% {
-    right: 90px;
+    right: 80px;
     top: -200%;
   }
 }
