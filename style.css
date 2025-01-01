@@ -365,7 +365,7 @@ canvas {
     position: absolute;
     top: 0%;
     animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
-    margin-left: -150px;
+    margin-left: -130px;
   }
 
   @keyframes old_animation_mobile {
