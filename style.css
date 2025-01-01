@@ -338,95 +338,50 @@ canvas {
 }
 
 @media screen and (max-width: 768px) {
-  /* Adjust the message text size and spacing */
   .msg {
-    font-size: 50px; /* Smaller font size */
-    margin-top: -150px; /* Adjust spacing for better positioning */
-  }
-
-  /* Adjust the year numbers */
-  .year {
-    position: absolute;
-    top: 50%; /* Center it vertically */
-    transform: translateY(-50%); /* Ensure proper centering */
-    width: 100%;
-    text-align: center;
+    font-size: 50px; /* Adjust message size for mobile */
+    margin-top: 0;
   }
 
   .year > span {
-    font-size: 80px; /* Smaller font size for the year */
-    letter-spacing: -3px; /* Adjust letter spacing */
+    font-size: 100px; /* Reduce year font size */
+    letter-spacing: -5px; /* Adjust spacing */
   }
 
   .first_year {
-    margin-right: 20px; /* Reduce spacing between numbers */
+    margin-right: 50px; /* Adjust spacing for mobile */
   }
 
-  .old {
-    position: absolute;
-    top: 0%;
-    animation: old_animation 2.5s ease-in-out 4s forwards;
-    margin-left: -40px; /* Adjust position to prevent collision */
-  }
-
-  .new {
-    position: absolute;
-    right: 0; /* Fix alignment */
-    animation: new_animation 5s ease-in-out 1.5s forwards;
-  }
-
-  @keyframes old_animation {
-    0% {
-      top: 0%;
-    }
-    100% {
-      top: -300%; /* Ensure it moves out cleanly */
-    }
-  }
-
-  @keyframes new_animation {
-    0% {
-      right: 0; /* Start aligned */
-    }
-    40% {
-      right: 200px; /* Middle animation position */
-    }
-    90% {
-      right: 200px;
-    }
-    100% {
-      right: 250px; /* Final aligned position */
-      color: yellow;
-    }
-  }
-
-  /* Adjust the balloon size and position */
   .balloon {
-    width: 50px;
-    height: 70px;
-    margin-top: -200px; /* Adjust to fit above year */
+    width: 60px; /* Smaller balloons */
+    height: 80px;
+    margin-top: -150px; /* Adjust positioning */
+  }
+
+  .balloon::before {
+    border-width: 0 5px 10px 5px; /* Resize the balloon tie */
   }
 
   .balloon::after {
-    height: 40px; /* Shorter string */
+    height: 50px; /* Shorter balloon string */
   }
 
   .firework {
-    transform: scale(0.5); /* Smaller fireworks */
+    transform: scale(0.75); /* Reduce firework size */
   }
 
   #firework1 {
-    left: 20%; /* Adjust positions to fit the screen */
-    top: 60%;
+    left: 20%; /* Adjust firework positions */
+    top: 40%;
   }
 
   #firework2 {
     left: 50%;
-    top: 70%;
+    top: 60%;
   }
 
   #firework3 {
-    left: 80%;
-    top: 30%;
+    left: 75%;
+    top: 20%;
   }
 }
