@@ -401,14 +401,32 @@ canvas {
   }
 
   /* Adjust balloon size and position */
-  .balloon {
-    width: 60px; /* Smaller balloons */
-    height: 80px;
-    margin-top: -150px; /* Adjust positioning */
-    right: 50%; /* Centered horizontally for mobile */
-    transform: translateX(50%); /* Align correctly with system format */
-    animation: balloon_animation_mobile 5s ease-in-out 1.5s forwards;
+  @keyframes balloon_animation_mobile {
+  0% {
+    right: -100px; /* Start outside the frame */
+    top: 50%; /* Start at the same vertical position */
   }
+  40% {
+    right: 400px; /* Intermediate horizontal position */
+    top: 30%; /* Adjusted vertical position to move upward */
+  }
+  90% {
+    right: 520px; /* Stabilize horizontal position */
+    top: 10%; /* Near the top but still visible */
+  }
+  100% {
+    right: 520px; /* Final horizontal position */
+    top: -150%; /* Move out of the frame upwards */
+  }
+}
+
+.balloon {
+  width: 60px; /* Smaller balloons for mobile */
+  height: 80px;
+  margin-top: -150px; /* Adjust positioning */
+  animation: balloon_animation_mobile 5s ease-in-out 1.5s forwards;
+}
+
 
   .balloon::before {
     border-width: 0 5px 10px 5px; /* Resize the balloon tie */
@@ -417,20 +435,6 @@ canvas {
   .balloon::after {
     height: 50px; /* Shorter balloon string */
   }
-  @keyframes balloon_animation_mobile {
-  0% {
-    right: 50%; /* Center start position */
-    top: 50%; /* Start at the middle */
-  }
-  40% {
-    right: 50%; /* Stay horizontally centered */
-    top: 30%; /* Intermediate position */
-  }
-  100% {
-    right: 50%; /* Remain centered */
-    top: -200%; /* Move completely out of the frame */
-  }
-}
 
   /* Fireworks scaling and positioning */
   .firework {
