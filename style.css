@@ -365,12 +365,13 @@ canvas {
     position: absolute;
     top: 0%;
     animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
-    margin-left: -60px;
+    margin-left: -80px;
   }
 
   @keyframes old_animation_mobile {
     0% {
       top: 0%;
+      right: 100px;
     }
     100% {
       top: -300%; /* Move '4' completely out of the frame */
