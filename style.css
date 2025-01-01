@@ -342,7 +342,6 @@ canvas {
   .msg {
     font-size: 50px; /* Adjust message size for mobile */
     margin-top: 0;
-    top: 25%; /* Move it higher */
   }
 
   /* Adjust year styles */
@@ -357,7 +356,7 @@ canvas {
   }
 
   .first_year {
-    margin-right: 50px; /* Adjust spacing between "202" and "5" */
+    margin-right: 100px; /* Adjust spacing between "202" and "5" */
   }
 
   /* Fix animation for old '4' */
