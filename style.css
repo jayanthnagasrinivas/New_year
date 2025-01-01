@@ -347,7 +347,7 @@ canvas {
   /* Adjust the year numbers */
   .year {
     position: absolute;
-    top: 25%; /* Center it vertically */
+    top: 40%; /* Center it vertically */
     transform: translateY(-50%); /* Ensure proper centering */
     width: 100%;
     text-align: center;
