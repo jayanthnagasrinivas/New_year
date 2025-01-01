@@ -371,7 +371,6 @@ canvas {
   @keyframes old_animation_mobile {
     0% {
       top: 0%;
-      left: 0%;
     }
     100% {
       top: -300%; /* Move '4' completely out of the frame */
