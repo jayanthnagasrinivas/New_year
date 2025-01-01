@@ -343,11 +343,19 @@ canvas {
     font-size: 50px; /* Adjust message size for mobile */
     margin-top: 0;
   }
-
+  @keyframes move_year_right {
+  0% {
+    transform: translateY(-50%); /* Initial position */
+  }
+  100% {
+    transform: translateY(-50%) translateX(100px); /* Move the year to the right */
+  }
+}
   /* Adjust year styles */
   .year {
     top: 40%; /* Move year text slightly upward */
     transform: translateY(-50%);
+    animation: move_year_right 2s ease-in-out 6s forwards; /* Apply animation after 6s */
   }
 
   .year > span {
