@@ -346,27 +346,38 @@ canvas {
 
   /* Adjust year styles */
   .year {
-    top: 40%; /* Move year text slightly upward */
-    transform: translateY(-50%);
-  }
+  top: 40%; /* Adjust year text slightly upward */
+  transform: translateY(-50%);
+}
+.year > span {
+  font-size: 100px; /* Reduce year font size */
+  letter-spacing: -5px; /* Adjust spacing */
+}
+.first_year {
+  margin-right: 50px; /* Adjust spacing between "202" and "5" */
+}
 
-  .year > span {
-    font-size: 100px; /* Reduce year font size */
-    letter-spacing: -5px; /* Adjust spacing */
-  }
-
-  .first_year {
-    margin-right: 100px; /* Adjust spacing between "202" and "5" */
-  }
 
   /* Fix animation for old '4' */
   .old {
-    color: #fff;
-    position: absolute;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
+  margin-left: -50px;
+}
+
+@keyframes old_animation_mobile {
+  0% {
     top: 0%;
-    animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
-    margin-left: -50px;
+    left: 0%; /* Start from its original position */
   }
+  100% {
+    top: -200%; /* Move up and out of frame */
+    left: -100%; /* Move completely to the left */
+  }
+}
+
 
   @keyframes old_animation_mobile {
     0% {
@@ -379,10 +390,27 @@ canvas {
 
   /* Fix animation for new '5' */
   .new {
-    position: absolute;
-    right: 0;
-    animation: new_animation_mobile 5s ease-in-out 1.5s forwards;
+  position: absolute;
+  right: -100px;
+  animation: new_animation_mobile 5s ease-in-out 1.5s forwards;
+}
+
+@keyframes new_animation_mobile {
+  0% {
+    right: -100px; /* Start from outside the frame */
   }
+  40% {
+    right: 200px; /* Intermediate position */
+  }
+  90% {
+    right: 200px; /* Stabilize position */
+  }
+  100% {
+    right: 300px; /* Move further to the right */
+    color: yellow; /* Highlight final position */
+  }
+}
+
 
   @keyframes new_animation_mobile {
     0% {
@@ -417,21 +445,24 @@ canvas {
 
   /* Fireworks scaling and positioning */
   .firework {
-    transform: scale(0.75); /* Reduce firework size */
-  }
+  opacity: 1; /* Ensure fireworks are visible */
+  transform: scale(0.75); /* Adjust firework size */
+  animation: show_fireworks 2s ease-in-out 5s forwards;
+}
 
-  #firework1 {
-    left: 20%; /* Adjust firework positions */
-    top: 40%;
-  }
+#firework1 {
+  left: 20%; /* Adjust position to stay within the frame */
+  top: 40%;
+}
 
-  #firework2 {
-    left: 50%;
-    top: 60%;
-  }
+#firework2 {
+  left: 50%;
+  top: 60%;
+}
 
-  #firework3 {
-    left: 75%;
-    top: 20%;
-  }
+#firework3 {
+  left: 75%;
+  top: 20%;
+}
+
 }
