@@ -401,24 +401,6 @@ canvas {
   }
 
   /* Adjust balloon size and position */
-  @keyframes balloon_animation_mobile {
-  0% {
-    right: -100px; /* Start outside the frame */
-    top: 50%; /* Start at the same vertical position */
-  }
-  40% {
-    right: 400px; /* Intermediate horizontal position */
-    top: 30%; /* Adjusted vertical position to move upward */
-  }
-  90% {
-    right: 520px; /* Stabilize horizontal position */
-    top: 10%; /* Near the top but still visible */
-  }
-  100% {
-    right: 520px; /* Final horizontal position */
-    top: -150%; /* Move out of the frame upwards */
-  }
-}
 
 .balloon {
   width: 60px; /* Smaller balloons for mobile */
@@ -426,7 +408,23 @@ canvas {
   margin-top: -150px; /* Adjust positioning */
   animation: balloon_animation_mobile 5s ease-in-out 1.5s forwards;
 }
-
+  @keyframes balloon_animation_mobile {
+  0% {
+    right: -100px;
+    top: 50%;
+  }
+  40% {
+    right: 380px;
+  }
+  50% {
+    right: 530px;
+    top: 50%;
+  }
+  100% {
+    right: 530px;
+    top: -200%;
+  }
+}
 
   .balloon::before {
     border-width: 0 5px 10px 5px; /* Resize the balloon tie */
