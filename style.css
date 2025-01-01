@@ -389,13 +389,13 @@ canvas {
       right: -100px; /* Start outside the frame */
     }
     40% {
-      right: 100px; /* Intermediate position */
+      right: 50px; /* Intermediate position */
     }
     90% {
-      right: 100px; /* Stabilize the position */
+      right: 50px; /* Stabilize the position */
     }
     100% {
-      right: 120px; /* Final aligned position */
+      right: 90px; /* Final aligned position */
       color: yellow;
     }
   }
