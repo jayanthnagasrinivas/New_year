@@ -365,7 +365,7 @@ canvas {
     position: absolute;
     top: 0%;
     animation: old_animation_mobile 2.5s ease-in-out 4s forwards;
-    margin-left: -130px;
+    margin-left: -120px;
   }
 
   @keyframes old_animation_mobile {
@@ -389,13 +389,13 @@ canvas {
       right: -100px; /* Start outside the frame */
     }
     40% {
-      right: 50px; /* Intermediate position */
+      right: 10px; /* Intermediate position */
     }
     90% {
-      right: 50px; /* Stabilize the position */
+      right: 10px; /* Stabilize the position */
     }
     100% {
-      right: 90px; /* Final aligned position */
+      right: 50px; /* Final aligned position */
       color: yellow;
     }
   }
