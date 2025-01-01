@@ -341,13 +341,13 @@ canvas {
   /* Adjust the message text size and spacing */
   .msg {
     font-size: 50px; /* Smaller font size */
-    margin-top: -125px; /* Adjust spacing for better positioning */
+    margin-top: -150px; /* Adjust spacing for better positioning */
   }
 
   /* Adjust the year numbers */
   .year {
     position: absolute;
-    top: 50%; /* Center it vertically */
+    top: 100%; /* Center it vertically */
     transform: translateY(-50%); /* Ensure proper centering */
     width: 100%;
     text-align: center;
