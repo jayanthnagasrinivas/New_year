@@ -369,14 +369,15 @@ canvas {
   }
 
   @keyframes old_animation_mobile {
-    0% {
-      top: 0%;
-      right: 100px;
-    }
-    100% {
-      top: -300%; /* Move '4' completely out of the frame */
-    }
+  0% {
+    top: 0%;
+    left: 0%; /* Start from its original position */
   }
+  100% {
+    top: -200%; /* Move up and out of frame */
+    left: -100%; /* Move completely to the left */
+  }
+}
 
   /* Fix animation for new '5' */
   .new {
