@@ -336,43 +336,53 @@ canvas {
     opacity: 1;
   }
 }
-/* Mobile Styling */
-@media screen and (max-width: 768px) {
-  .footer-text {
-    font-size: 24px;
-    bottom: 10px;
-  }
 
+@media screen and (max-width: 768px) {
   .msg {
-    font-size: 50px;
-    top: 45%; /* Slightly adjust positioning */
+    font-size: 50px; /* Adjust message size for mobile */
+    margin-top: 0;
   }
 
   .year > span {
-    font-size: 80px; /* Reduce year font size */
-    letter-spacing: -8px;
+    font-size: 100px; /* Reduce year font size */
+    letter-spacing: -5px; /* Adjust spacing */
+  }
+
+  .first_year {
+    margin-right: 50px; /* Adjust spacing for mobile */
   }
 
   .balloon {
-    width: 40px;
-    height: 60px;
+    width: 60px; /* Smaller balloons */
+    height: 80px;
+    margin-top: -150px; /* Adjust positioning */
   }
 
-  .new {
-    right: -50px; /* Adjust positioning */
+  .balloon::before {
+    border-width: 0 5px 10px 5px; /* Resize the balloon tie */
   }
 
-  .old {
-    margin-left: -40px; /* Adjust position of old number */
+  .balloon::after {
+    height: 50px; /* Shorter balloon string */
   }
 
   .firework {
-    transform: scale(0.6); /* Reduce size for smaller screens */
+    transform: scale(0.75); /* Reduce firework size */
   }
 
-  canvas {
-    width: 100%;
-    height: 100%; /* Ensure canvas fits mobile */
+  #firework1 {
+    left: 20%; /* Adjust firework positions */
+    top: 40%;
+  }
+
+  #firework2 {
+    left: 50%;
+    top: 60%;
+  }
+
+  #firework3 {
+    left: 75%;
+    top: 20%;
   }
 }
 
