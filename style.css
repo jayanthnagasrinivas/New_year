@@ -336,3 +336,43 @@ canvas {
     opacity: 1;
   }
 }
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+  .footer-text {
+    font-size: 24px;
+    bottom: 10px;
+  }
+
+  .msg {
+    font-size: 50px;
+    top: 45%; /* Slightly adjust positioning */
+  }
+
+  .year > span {
+    font-size: 80px; /* Reduce year font size */
+    letter-spacing: -8px;
+  }
+
+  .balloon {
+    width: 40px;
+    height: 60px;
+  }
+
+  .new {
+    right: -50px; /* Adjust positioning */
+  }
+
+  .old {
+    margin-left: -40px; /* Adjust position of old number */
+  }
+
+  .firework {
+    transform: scale(0.6); /* Reduce size for smaller screens */
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%; /* Ensure canvas fits mobile */
+  }
+}
+
