@@ -422,14 +422,14 @@ canvas {
     top: 50%;
   }
   40% {
-    right: 160px;
+    right: 50px;
   }
   50% {
-    right: 310px;
+    right: 100px;
     top: 50%;
   }
   100% {
-    right: 310px;
+    right: 100px;
     top: -200%;
   }
 }
