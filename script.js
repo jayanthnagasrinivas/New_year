@@ -109,3 +109,21 @@ function Run() {
   }
   requestAnimationFrame(Run);
 }
+
+c.addEventListener('touchstart', function(e) {
+  var rect = c.getBoundingClientRect();
+  var touch = e.touches[0];
+  var x = (touch.clientX - rect.left) / rect.width;
+  var y = (touch.clientY - rect.top) / rect.height;
+
+  var shell = {
+    x: x,
+    y: y,
+    xoff: (Math.random() * 0.02 - 0.01),
+    yoff: (Math.random() * 0.02 - 0.01),
+    size: Math.random() * 6 + 3,
+    color: colors[Math.floor(Math.random() * colors.length)],
+  };
+
+  shells.push(shell);
+});
