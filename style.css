@@ -341,7 +341,7 @@ canvas {
   /* Adjust the message text size and spacing */
   .msg {
     font-size: 50px; /* Smaller font size */
-    margin-top: -150px; /* Adjust spacing for better positioning */
+    margin-top: -125px; /* Adjust spacing for better positioning */
   }
 
   /* Adjust the year numbers */
